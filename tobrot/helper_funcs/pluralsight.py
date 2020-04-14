@@ -16,12 +16,13 @@ from subprocess import call
 
 from tobrot import (
     DOWNLOAD_LOCATION
-    
+    USER_NAME,
+    PASSWORD
 )
-
+"""
 USER_NAME = "taxeta8379@johnderasia.com"
 PASSWORD = "taxeta8379@johnderasia.com"
-"""
+
 new_download_locatio ="king"
 url = "king"
 sent_message_to_update_tg_p = "king"
