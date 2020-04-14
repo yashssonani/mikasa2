@@ -28,7 +28,7 @@ sent_message_to_update_tg_p = "king"
 c_file_name = "king"
 """
 async def plu_dl(url,sent_message_to_update_tg_p,c_file_name):
-    eco = command_exec(url,c_file_name)
+    eco = await command_exec(url,c_file_name)
     to_upload_file = c_file_name
     response = {}
     LOGGER.info(response)
