@@ -15,14 +15,13 @@ from tobrot.helper_funcs.upload_to_tg import upload_to_tg
 from subprocess import call 
 
 from tobrot import (
-    DOWNLOAD_LOCATION
+    DOWNLOAD_LOCATION,
     USER_NAME,
     PASSWORD
 )
 """
-USER_NAME = "taxeta8379@johnderasia.com"
-PASSWORD = "taxeta8379@johnderasia.com"
-
+USER_NAME = "hello"
+PASSWORD = "MOJO"
 new_download_locatio ="king"
 url = "king"
 sent_message_to_update_tg_p = "king"
@@ -53,8 +52,6 @@ async def command_exec(url,new_download_location):
          "p"+PASSWORD,
          "--no-warnings",
          "--console-title",
-         "--playlist-start1",
-         "--playlist-end3",
          "--max-sleep-interval20",
          "--min-sleep-interval15",
          "-o"+new_download_location+"%(playlist_title)s/%(chapter_number)s - %(chapter)s/%(playlist_index)s-%(title)s.%(ext)s",
