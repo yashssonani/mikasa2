@@ -58,7 +58,8 @@ async def incoming_message_f(client, message):
             await i_m_sefg.edit_text("trying to download")
 
             plu_dl(dl_url,
-            i_m_sefg
+            i_m_sefg,
+            new_download_location
             )
         else:
             await i_m_sefg.edit_text("extracting links")
