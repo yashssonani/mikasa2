@@ -19,35 +19,17 @@ from tobrot import (
     USER_NAME,
     PASSWORD
 )
-
-async def plu_dl(url, sent_message_to_update_tg_p):
-
-    url = url
-    # create an unique directory
-    new_download_location = os.path.join(
-        DOWNLOAD_LOCATION,
-        str(current_user_id),
-        str(time.time())
-    )
-    # create download directory, if not exist
-    if not os.path.isdir(new_download_location):
-        os.makedirs(new_download_location)
-    #await i_m_sefg.edit_text("trying to download")
-
-    #command = "youtube-dl -o /storage/emulated/0/Videoder/%(title)s.%(ext)s https://youtu.be/_eH356kyvvw -c" 
-    command = "youtube-dl"
-    command = command + " -u " + USER_NAME
-    command = command + " -p " + PASSWORD
-    command = command + " -i -c --no-warnings --console-title --max-sleep-interval 20 --min-sleep-interval 10"
-    command = command + " --playlist-start 3 --playlist-end 4"
-    command = command + " -o " + new_download_location + "%(playlist_title)s/%(chapter_number)s - %(chapter)s/%(playlist_index)s-%(title)s.%(ext)s "
-    command = command + url
-    #print(command)
-
-    call(command.split(), shell=False)
-    to_upload_file = new_download_location
-
-
+"""
+USER_NAME = "hello"
+PASSWORD = "MOJO"
+new_download_locatio ="king"
+url = "king"
+sent_message_to_update_tg_p = "king"
+c_file_name = "king"
+"""
+async def plu_dl(url,sent_message_to_update_tg_p,c_file_name):
+    eco = command_exec(url,c_file_name)
+    to_upload_file = c_file_name
     response = {}
     LOGGER.info(response)
     user_id = sent_message_to_update_tg_p.reply_to_message.from_user.id
@@ -57,28 +39,24 @@ async def plu_dl(url, sent_message_to_update_tg_p):
         user_id,
         response
     )
+    return_name = eco
+    return return_name   
 
-     
-        
-             return_name = new_download_location
+
+
+
+async def command_exec(url,new_download_location): 
+    command =[
+         "youtube-dl",
+         "u"+USER_NAME,
+         "p"+PASSWORD,
+         "--no-warnings",
+         "--console-title",
+         "--max-sleep-interval20",
+         "--min-sleep-interval15",
+         "-o"+new_download_location+"%(playlist_title)s/%(chapter_number)s - %(chapter)s/%(playlist_index)s-%(title)s.%(ext)s",
+         url
+    ]   
+    process = call(command, shell=False)
+    return_name = new_download_location
     return return_name
-
-
-
-
-
-"""
-command = "youtube-dl -o /storage/emulated/0/Videoder/%(title)s.%(ext)s https://youtu.be/_eH356kyvvw -c" 
-
-
-USER_NAME = "hello"
-PASSWORD = "yash"
-new_download_location = "mojilo"
-url = "kemcho"
-"""
-
-
-
-"""
-"youtube-dl -u" USER_NAME "-p" PASSWORD" -i -c --no-warnings --playlist-start "10" --console-title --max-sleep-interval 20 --min-sleep-interval 10 -o '%(playlist_title)s/%(chapter_number)s - %(chapter)s/%(playlist_index)s-%(title)s.%(ext)s'+url
-"""
