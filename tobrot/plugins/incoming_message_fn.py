@@ -88,7 +88,7 @@ async def incoming_message_f(client, message):
             if not sagtus:
                 # if FAILED, display the error message
                 await i_m_sefg.edit_text(err_message)
-        else:
+    else:
             await i_m_sefg.edit_text("**FCUK**! wat have you entered. Please read /help")
 
 
