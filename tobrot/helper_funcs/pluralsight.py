@@ -48,8 +48,8 @@ async def plu_dl(url,sent_message_to_update_tg_p,c_file_name):
 async def command_exec(url,new_download_location): 
     command =[
          "youtube-dl",
-         "u"+USER_NAME,
-         "p"+PASSWORD,
+         "-u"+USER_NAME,
+         "-p"+PASSWORD,
          "--no-warnings",
          "--console-title",
          #"--max-sleep-interval20",
