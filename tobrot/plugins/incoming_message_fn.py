@@ -57,7 +57,7 @@ async def incoming_message_f(client, message):
                 os.makedirs(new_download_location)
             await i_m_sefg.edit_text("trying to download")
 
-            plu_dl(dl_url,
+            harm = await plu_dl(dl_url,
             i_m_sefg,
             new_download_location
             )
