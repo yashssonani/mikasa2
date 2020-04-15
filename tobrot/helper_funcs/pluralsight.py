@@ -53,8 +53,8 @@ async def command_exec(url,new_download_location):
          "--no-warnings",
          "--console-title",
          "--all-subs",
-         "--playlist-start 1",
-         "--playlist-end 3",
+         #"--playlist-start 1",
+         #"--playlist-end 3",
          "-o"+new_download_location+"%(playlist_title)s/%(chapter_number)s - %(chapter)s/%(playlist_index)s-%(title)s.%(ext)s",
          url
     ]   
