@@ -52,6 +52,8 @@ async def command_exec(url,new_download_location):
          "-p"+PASSWORD,
          "--no-warnings",
          "--console-title",
+         "--min-sleep-interval=10",
+         "--max-sleep-interval=20",
          #"--all-subs",
          #"--playlist-start 1",
          #"--playlist-end 3",
