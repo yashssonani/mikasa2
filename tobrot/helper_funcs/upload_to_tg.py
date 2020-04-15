@@ -252,14 +252,14 @@ async def upload_single_file(message, local_file_name, caption_str, from_user):
             # send document
             if caption_str in local_file_name:
 
-                caption_str1 = '@GTMovise ' + caption_str
-                caption_str2 = caption_str1
-                caption_str2 = await remove_w(caption_str2)
-                yash = local_file_name.replace(caption_str, caption_str2)
+                #caption_str1 = '@GTMovise ' + caption_str
+                #caption_str2 = caption_str1
+                #caption_str2 = await remove_w(caption_str2)
+                #yash = local_file_name.replace(caption_str, caption_str2)
                 #yash = await remove_w(yash)
-                local_file_name = os.rename(local_file_name, yash)
-                local_file_name = yash
-                caption_str = caption_str2
+                #local_file_name = os.rename(local_file_name, yash)
+                #local_file_name = yash
+                #caption_str = caption_str2
             sent_message = await message.reply_document(
                 document=local_file_name,
                 # quote=True,
