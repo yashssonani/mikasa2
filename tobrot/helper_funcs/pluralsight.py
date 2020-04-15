@@ -58,6 +58,11 @@ async def command_exec(url,new_download_location):
          "-o"+new_download_location+"%(playlist_title)s/%(chapter_number)s - %(chapter)s/%(playlist_index)s-%(title)s.%(ext)s",
          url
     ]   
-    process = call(command, shell=False)
+    process = await asyncio.create_subprocess_exec(
+        *command,
+        # stdout must a pipe to be accessible as process.stdout
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+    )
     return_name = new_download_location
     return return_name
