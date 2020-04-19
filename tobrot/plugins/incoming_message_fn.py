@@ -62,6 +62,9 @@ async def incoming_message_f(client, message):
             i_m_sefg,
             new_download_location
             )
+            LOGGER.info(harm)
+            i_m_sefg = await message.reply_text("All Clips Uploaded", quote=True)
+    
         else:
             await i_m_sefg.edit_text("extracting links")
             # start the aria2c daemon
