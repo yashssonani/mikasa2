@@ -39,6 +39,7 @@ async def plu_dl(url,sent_message_to_update_tg_p,c_file_name):
         user_id,
         response
     )
+    
     return_name = eco
     return return_name   
 
@@ -59,7 +60,8 @@ async def command_exec(url,new_download_location):
          #"--playlist-end 3",
          "-o"+new_download_location+"%(playlist_title)s/%(chapter_number)s - %(chapter)s/%(playlist_index)s-%(title)s.%(ext)s",
          url
-    ]   
+    ]
+    LOGGER.info(url)   
     process = call(command, shell=False)
     return_name = new_download_location
     return return_name
