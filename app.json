@@ -14,9 +14,9 @@
     "youtube-dl",
     "leecher"
   ],
-  "repository": "https://github.com/SpEcHiDe/PublicLeech",
+  "repository": "https://github.com/yashssonani/mikasa2",
   "success_url": "https://telegram.dog/ThankTelegram",
-  "website": "https://github.com/SpEcHiDe/PublicLeech",
+  "website": "https://github.com/yashssonani/mikasa2",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -47,6 +47,14 @@
       "description": "should be an integer. The port on which aria2c daemon must start, and keep listening.",
       "value": "6800",
       "required": false
+    },
+    "USER_NAME": {
+      "description": "Pluralsight Account User Name.",
+      "value": ""
+    },
+    "PASSWORD": {
+      "description": "Pluralsight Account Password.",
+      "value": ""
     },
     "EDIT_SLEEP_TIME_OUT": {
       "description": "should be an integer. Number of seconds to wait before editing a message.",
