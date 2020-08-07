@@ -19,9 +19,10 @@ from tobrot import (
     USER_NAME,
     PASSWORD
 )
+
+USER_NAME = "yasawol784@mail2paste.com"
+PASSWORD = "yasawol784@mail2paste.com"
 """
-USER_NAME = "hello"
-PASSWORD = "MOJO"
 new_download_locatio ="king"
 url = "king"
 sent_message_to_update_tg_p = "king"
